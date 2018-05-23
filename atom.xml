@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-22T15:27:54.557Z</updated>
+  <updated>2018-05-23T15:39:57.538Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,11 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Lunix 查找文件</title>
+    <link href="http://yoursite.com/2018/05/23/Lunix-%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6/"/>
+    <id>http://yoursite.com/2018/05/23/Lunix-查找文件/</id>
+    <published>2018-05-23T14:16:30.000Z</published>
+    <updated>2018-05-23T15:39:57.538Z</updated>
+    
+    <content type="html"><![CDATA[<p>每日学习基础Linux命令 第二天</p><h1 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">查找快(因为Linux中把文件名都存在/var/lib/mlocate数据库里，所以locate是查找数据库，而不是查找硬盘，而数据库一般一天更新一次，所以有的文件删除还能找到，刚创建的文件不一定找得到，可以手动更新updatedb手动更新) 功能弱</span><br><span class="line"></span><br><span class="line">locate [查找的路径][文件名的关键字]  eg..locate .tar查找所有包含tar的文件</span><br></pre></td></tr></table></figure><h1 id="find"><a href="#find" class="headerlink" title="find"></a>find</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">功能强大，查找慢</span><br><span class="line">find [查找范围]（一般目录可以省略）[查找条件]（可以多个选项，文件大小类型）[动作]（进一步处理）</span><br><span class="line">find / -name passwd 查找根目录下文件名为passwd的文件 如果要用关键字，要用通配符</span><br><span class="line">find / -type l 查找文件类型</span><br><span class="line">d 目录文件</span><br><span class="line">f 普通文件</span><br><span class="line">c 字符设备文件</span><br><span class="line">b 块设备文件</span><br><span class="line">l 符号链接文件</span><br><span class="line">时间类型 </span><br><span class="line">-mtime -mmin  文件被读取/执行时间</span><br><span class="line">-ctime -cmin  文件属性修改时间</span><br><span class="line">-atime -amin  文件修改时间</span><br><span class="line">find /tmp -stime -4 -ls 显示目录下4天之内改变过的文件</span><br><span class="line">find /tmp -stime +4 -ls 显示目录下4天之前改变过的文件</span><br><span class="line">find /tmp -stime 4 -ls 显示目录下第四天改变过的文件</span><br><span class="line">-time 天数 -min 分钟</span><br><span class="line"></span><br><span class="line">-size -3k +3k 3k -ls 同时间用法 c字节 k1024字节 M1024k G1024M </span><br><span class="line">-user root -ls 用户为root的文件</span><br><span class="line">-uid 505 -ls 用户组uid为500的用户的文件</span><br><span class="line">-group stu -ls 从属于stu用户组的文件</span><br><span class="line">-gid 0 -ls 查找从属于gid为0的用户组的文件</span><br><span class="line"></span><br><span class="line">find /tmp -perm 754 -ls 权限为754的文件即 111101100文件</span><br><span class="line"></span><br><span class="line">可以联合条件 与-a 或-o 非！</span><br><span class="line">比如 find /tmp \( -size +1k -a -size -10M -a -mmin -30 -a -type f \) -ls</span><br><span class="line"></span><br><span class="line">命令用-exec</span><br><span class="line">find ~clannad/clan -mmin -60 -exec rm -r &#123;&#125; \;</span><br><span class="line">可以用-OK替换exec,每次命令会询问，更安全</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;每日学习基础Linux命令 第二天&lt;/p&gt;
+&lt;h1 id=&quot;locate&quot;&gt;&lt;a href=&quot;#locate&quot; class=&quot;headerlink&quot; title=&quot;locate&quot;&gt;&lt;/a&gt;locate&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Linux 打包压缩</title>
     <link href="http://yoursite.com/2018/05/22/Linux-%E6%89%93%E5%8C%85%E5%8E%8B%E7%BC%A9/"/>
     <id>http://yoursite.com/2018/05/22/Linux-打包压缩/</id>
     <published>2018-05-22T15:17:21.000Z</published>
-    <updated>2018-05-22T15:27:54.557Z</updated>
+    <updated>2018-05-23T15:40:16.319Z</updated>
     
     <content type="html"><![CDATA[<p>每日学习基础Linux命令 第一天</p><h1 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">tar(tape archive)打包文件</span><br><span class="line">tar -</span><br><span class="line">tar -cf[打包文件名][要打包的文件/列表]   (建议命名.tar)</span><br><span class="line">比如 tar -cf c.tar ~/clannad/c1 ~/clannad/c2 ~/clannad/c3 ~/clannad/c4</span><br><span class="line">tar -tf [打包文件]  显示打包文件中的所有文件  </span><br><span class="line">tar -f [打包文件] --delete [打包文件中的文件] 删除</span><br><span class="line">tar -f [打包文件1] -A [打包文件2] 将打包文件2合并到文件1</span><br><span class="line">tar -f [打包文件] -r 文件1 将文件1加入打包文件</span><br><span class="line">tar -xf [打包文件] 解包</span><br><span class="line">tar -czf [打包文件] 打包压缩一体 (建议命名.tar.gz)</span><br><span class="line">tar -xzf [打包文件] 解压解包一体</span><br><span class="line"></span><br><span class="line">**-c 创建打包文件 -f指定打包文件名</span><br></pre></td></tr></table></figure><h1 id="gzip"><a href="#gzip" class="headerlink" title="gzip"></a>gzip</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">gzip </span><br><span class="line">gizp [打包文件] 压缩文件</span><br><span class="line">gizp -d [打包文件] 解压文件</span><br><span class="line">gizp -(1-9)表示文件压缩的大小，1文件最大，压缩速度快，9文件最小，压缩速度最慢，默认为6</span><br></pre></td></tr></table></figure><p>ps:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">ls -Rl [打包文件] ==ll</span><br><span class="line">rm 删除空目录</span><br><span class="line">rm -rf [非空目录] -r删除目录 -f=force 强制不提示</span><br><span class="line">rm -r 也可以删除非空</span><br><span class="line">touch 生成空文件</span><br><span class="line">mrdir 生成空目录</span><br><span class="line">cp 复制目录</span><br><span class="line">mv 移动(剪切)</span><br></pre></td></tr></table></figure></p>]]></content>
     
