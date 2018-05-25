@@ -69,7 +69,7 @@
 
 
 
-  <meta name="keywords" content="Linux," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -82,18 +82,17 @@
 
 
 
-<meta name="description" content="每日学习基础Linux命令 第三天 通配符* [] {} ?12345678*代表任意字符串rm (-f) *.text 指删除带有后缀.text的所有文件？ 代表任意的单个字符[c1,c2] 代表任意c1-c2之间的单一字符、有序或者[c1,c2,c3,c3,c5] 代表列表中的单一字符&amp;#123;string1,string2......&amp;#125; 表示包含多种字符串的文件 例如 ll &amp;#">
-<meta name="keywords" content="Linux">
+<meta name="description" content="echo  echo 用来创建空文本touch 用来创建空文件  &amp;gt;输出重定向  1&amp;gt; stdout.txt 将正常输出输出到对应文件2&amp;gt; stderr.txt 将错误输出输出到对应文件2&amp;gt;&amp;gt;/dev/null 将错误输出输出到空文件/dev/null 视为黑洞，写入的文件将被丢弃 如果存在对应文件单个&amp;gt;将会覆盖，否则就创建新文件，如果不覆盖，那么用&amp;gt;&amp;gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Linux 通配符-查看文本内容">
-<meta property="og:url" content="http://yoursite.com/2018/05/24/Linux-通配符-查看文本内容/index.html">
+<meta property="og:title" content="Linux 重定向（Redirection）和管道（Pipes）">
+<meta property="og:url" content="http://yoursite.com/2018/05/25/Linux-重定向/index.html">
 <meta property="og:site_name" content="Clannad">
-<meta property="og:description" content="每日学习基础Linux命令 第三天 通配符* [] {} ?12345678*代表任意字符串rm (-f) *.text 指删除带有后缀.text的所有文件？ 代表任意的单个字符[c1,c2] 代表任意c1-c2之间的单一字符、有序或者[c1,c2,c3,c3,c5] 代表列表中的单一字符&amp;#123;string1,string2......&amp;#125; 表示包含多种字符串的文件 例如 ll &amp;#">
+<meta property="og:description" content="echo  echo 用来创建空文本touch 用来创建空文件  &amp;gt;输出重定向  1&amp;gt; stdout.txt 将正常输出输出到对应文件2&amp;gt; stderr.txt 将错误输出输出到对应文件2&amp;gt;&amp;gt;/dev/null 将错误输出输出到空文件/dev/null 视为黑洞，写入的文件将被丢弃 如果存在对应文件单个&amp;gt;将会覆盖，否则就创建新文件，如果不覆盖，那么用&amp;gt;&amp;gt;">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-05-25T03:20:08.112Z">
+<meta property="og:updated_time" content="2018-05-25T11:16:02.273Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Linux 通配符-查看文本内容">
-<meta name="twitter:description" content="每日学习基础Linux命令 第三天 通配符* [] {} ?12345678*代表任意字符串rm (-f) *.text 指删除带有后缀.text的所有文件？ 代表任意的单个字符[c1,c2] 代表任意c1-c2之间的单一字符、有序或者[c1,c2,c3,c3,c5] 代表列表中的单一字符&amp;#123;string1,string2......&amp;#125; 表示包含多种字符串的文件 例如 ll &amp;#">
+<meta name="twitter:title" content="Linux 重定向（Redirection）和管道（Pipes）">
+<meta name="twitter:description" content="echo  echo 用来创建空文本touch 用来创建空文件  &amp;gt;输出重定向  1&amp;gt; stdout.txt 将正常输出输出到对应文件2&amp;gt; stderr.txt 将错误输出输出到对应文件2&amp;gt;&amp;gt;/dev/null 将错误输出输出到空文件/dev/null 视为黑洞，写入的文件将被丢弃 如果存在对应文件单个&amp;gt;将会覆盖，否则就创建新文件，如果不覆盖，那么用&amp;gt;&amp;gt;">
 
 
 
@@ -123,13 +122,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2018/05/24/Linux-通配符-查看文本内容/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/05/25/Linux-重定向/"/>
 
 
 
 
 
-  <title>Linux 通配符-查看文本内容 | Clannad</title>
+  <title>Linux 重定向（Redirection）和管道（Pipes） | Clannad</title>
   
 
 
@@ -258,7 +257,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/24/Linux-通配符-查看文本内容/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/05/25/Linux-重定向/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Clannad">
@@ -275,7 +274,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Linux 通配符-查看文本内容</h1>
+          <h1 class="post-title" itemprop="name headline">Linux 重定向（Redirection）和管道（Pipes）</h1>
         
 
         <div class="post-meta">
@@ -287,8 +286,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-24T21:32:36+08:00">
-                2018-05-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-05-25T18:34:02+08:00">
+                2018-05-25
               </time>
             
 
@@ -325,15 +324,20 @@
       
 
       
-        <p><font color="#00ffff">每日学习基础Linux命令 第三天</font></p>
-<h1 id="通配符"><a href="#通配符" class="headerlink" title="通配符* [] {} ?"></a>通配符* [] {} ?</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">*代表任意字符串</span><br><span class="line">rm (-f) *.text 指删除带有后缀.text的所有文件</span><br><span class="line">？ 代表任意的单个字符</span><br><span class="line">[c1,c2] 代表任意c1-c2之间的单一字符、有序</span><br><span class="line">或者[c1,c2,c3,c3,c5] 代表列表中的单一字符</span><br><span class="line">&#123;string1,string2......&#125; 表示包含多种字符串的文件 </span><br><span class="line">例如 ll &#123;aaa,bbb&#125;*.text </span><br><span class="line">！表示取反，通常与&#123;&#125;、[]连用</span><br></pre></td></tr></table></figure>
-<h1 id="cat、less、more、head、tail"><a href="#cat、less、more、head、tail" class="headerlink" title="cat、less、more、head、tail"></a>cat、less、more、head、tail</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cat</span><br><span class="line">cat [文本文件]</span><br><span class="line">用于短的文本</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">推荐用less,支持大文本查看,根据Pageup,Pagedown翻页,利用/[字符串],查找文本中出现的字符串，利用</span><br><span class="line">n,N来查询上一个和下一个</span><br><span class="line">less</span><br><span class="line">less [文本文件]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">more</span><br><span class="line">more [文本文件]</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">head</span><br><span class="line">head -n [文本文件] 查看头n行文文本内容,不写默认10行</span><br></pre></td></tr></table></figure>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tail</span><br><span class="line"></span><br><span class="line">tail -n [文本文件] 查看尾n行文本</span><br></pre></td></tr></table></figure>
-<hr>
-<h2 id="ALL-Right-copy-clannad-club"><a href="#ALL-Right-copy-clannad-club" class="headerlink" title="ALL Right &copy; clannad.club"></a>ALL Right &copy; <font color="#00ffff" size="7"><a href="https://www.clannad.club" target="_blank" rel="noopener">clannad.club</a></font></h2>
+        <blockquote>
+<p>echo</p>
+</blockquote>
+<p>echo 用来创建空文本<br>touch 用来创建空文件</p>
+<blockquote>
+<p>>输出重定向</p>
+</blockquote>
+<p>1&gt; stdout.txt 将正常输出输出到对应文件<br>2&gt; stderr.txt 将错误输出输出到对应文件<br>2&gt;&gt;/dev/null 将错误输出输出到空文件<br>/dev/null 视为黑洞，写入的文件将被丢弃</p>
+<p>如果存在对应文件单个&gt;将会覆盖，否则就创建新文件，如果不覆盖，那么用&gt;&gt;将新内容写到文件元内容的下方。<br>&amp;&gt; std.txt可以 用来讲错误输出和正常输出输出到一个文本中</p>
+<blockquote>
+<p>\&lt; &lt;&lt;输入重定向<br></p>
+</blockquote>
+<p>tr <br><br>tr [ ] [ ] &lt;[文本]<br><br>例如 tr ‘ ‘ ‘\t’ &lt;./fruit.txt&gt; 将当前目录中，fruit文本中的空格替换为’\t’<br><br>sort<br><br>sort -k &lt;&lt;EOF<br><br>> 1 apple<br><br>> 2 pear<br><br>> 3 banana<br><br>例如 sort -k2 &lt;&lt;EOF 表示按第二个字段排序，界定符为EOF<br>也可以将排序后的内容输入到对应文本，可以在后面自己写</p>
+
       
     </div>
     
@@ -348,12 +352,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/Linux/" rel="tag"># Linux</a>
-          
-        </div>
-      
 
       
       
@@ -363,8 +361,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/05/23/Lunix-查找文件/" rel="next" title="Lunix 查找文件">
-                <i class="fa fa-chevron-left"></i> Lunix 查找文件
+              <a href="/2018/05/24/Linux-通配符-查看文本内容/" rel="next" title="Linux 通配符-查看文本内容">
+                <i class="fa fa-chevron-left"></i> Linux 通配符-查看文本内容
               </a>
             
           </div>
@@ -372,10 +370,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/05/25/Linux-重定向/" rel="prev" title="Linux 重定向（Redirection）和管道（Pipes）">
-                Linux 重定向（Redirection）和管道（Pipes） <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -427,17 +421,8 @@
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview-wrap sidebar-panel">
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -518,22 +503,6 @@
         </div>
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#通配符"><span class="nav-number">1.</span> <span class="nav-text">通配符* [] {} ?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#cat、less、more、head、tail"><span class="nav-number">2.</span> <span class="nav-text">cat、less、more、head、tail</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#ALL-Right-copy-clannad-club"><span class="nav-number">2.1.</span> <span class="nav-text">ALL Right © clannad.club</span></a></li></ol></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
