@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-26T15:44:50.106Z</updated>
+  <updated>2018-05-27T15:17:48.527Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-用户和用户组</title>
+    <link href="http://yoursite.com/2018/05/27/Linux-%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84/"/>
+    <id>http://yoursite.com/2018/05/27/Linux-用户和用户组/</id>
+    <published>2018-05-27T14:33:52.000Z</published>
+    <updated>2018-05-27T15:17:48.527Z</updated>
+    
+    <content type="html"><![CDATA[<p>每日学习Linux基础命令 第六天</p><h1 id="用户和用户组"><a href="#用户和用户组" class="headerlink" title="用户和用户组"></a>用户和用户组</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Linux通过ID来识别用户，正常情况每个用户有独一无二的id，称作UID(USer’s ID)</span><br><span class="line">有3类用户：</span><br><span class="line">管理员用户 root 0</span><br><span class="line">虚拟用户 bin、nobody等 1-499</span><br><span class="line">一般用户 500开始</span><br><span class="line"></span><br><span class="line">用户组</span><br><span class="line">GID （group‘sID）</span><br><span class="line">每个用户可以从属多个用户组，但只有一个主用户组</span><br></pre></td></tr></table></figure><h1 id="查看系统中的用户"><a href="#查看系统中的用户" class="headerlink" title="查看系统中的用户"></a>查看系统中的用户</h1> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">id [用户名]</span><br></pre></td></tr></table></figure><h1 id="切换用户"><a href="#切换用户" class="headerlink" title="切换用户"></a>切换用户</h1> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">su (Switch User)</span><br><span class="line">su -(l)  root 切换用户环境</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;每日学习Linux基础命令 第六天&lt;/p&gt;
+&lt;h1 id=&quot;用户和用户组&quot;&gt;&lt;a href=&quot;#用户和用户组&quot; class=&quot;headerlink&quot; title=&quot;用户和用户组&quot;&gt;&lt;/a&gt;用户和用户组&lt;/h1&gt;&lt;figure class=&quot;highlight plain&quot;&gt;
+      
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://yoursite.com/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux vimm</title>
