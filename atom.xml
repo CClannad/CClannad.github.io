@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2018-05-27T15:17:48.527Z</updated>
+  <updated>2018-05-28T15:06:44.523Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux-用户和用户组(2)</title>
+    <link href="http://yoursite.com/2018/05/28/Linux-%E7%94%A8%E6%88%B7%E5%92%8C%E7%94%A8%E6%88%B7%E7%BB%84-2/"/>
+    <id>http://yoursite.com/2018/05/28/Linux-用户和用户组-2/</id>
+    <published>2018-05-28T14:07:48.000Z</published>
+    <updated>2018-05-28T15:06:44.523Z</updated>
+    
+    <content type="html"><![CDATA[<p>每日学习Linux基础命令 第七天</p><h1 id="创建用户"><a href="#创建用户" class="headerlink" title="创建用户"></a><font size="4">创建用户</font></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">useradd [用户名]</span><br><span class="line">设置密码 passwd [用户名]</span><br></pre></td></tr></table></figure><p><ul><br>    <li>UID 上一个新建用户UID+1</li><br>    <li>家目录 /home/用户名</li><br>    <li>用户备注 无</li><br>    <li>主用户组 新建与用户同名的用户组</li><br>    <li>从属用户组</li><br>    <li>Shell类型 bash</li><br></ul></p><blockquote><p>useradd -c clan -u 601 -d /tmp/stu01 clannad -G stu.s_group01</p></blockquote><p><ul></ul></p><p><li>-c指定用户备注</li></p><p><li>-u指定用户UID</li></p><p><li>-d指定用户家目录</li></p><p><li>-g指定主用户组</li></p><p><li>-G指定除主用户组外所从属的用户组</li><br><br>可用finger和id来检验</p><h1 id="修改用户"><a href="#修改用户" class="headerlink" title="修改用户"></a><font size="4">修改用户</font></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">usermod -c -u -d -g -G 修改</span><br><span class="line">用 -l -u 选项修改用户名和UID</span><br></pre></td></tr></table></figure><h1 id="删除用户"><a href="#删除用户" class="headerlink" title="删除用户"></a><font size="4">删除用户</font></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">userdel [用户名]</span><br><span class="line">如果要删除全部则</span><br><span class="line">userdel -rf [用户名]</span><br></pre></td></tr></table></figure><h1 id="创建用户组"><a href="#创建用户组" class="headerlink" title="创建用户组"></a><font size="4">创建用户组</font></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">groupadd [用户名]</span><br><span class="line">用usermod -G [用户组名] [用户]将用户加入到用户组中</span><br></pre></td></tr></table></figure><h1 id="修改用户组"><a href="#修改用户组" class="headerlink" title="修改用户组"></a><font size="4">修改用户组</font></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">groupmod -g 8888 -n [新的用户组名] [旧用户组名] 更改用户组的GID 更改用户组名</span><br></pre></td></tr></table></figure><h1 id="删除用户组"><a href="#删除用户组" class="headerlink" title="删除用户组"></a><font size="4">删除用户组</font></h1><blockquote><p>groupdel [用户组名] <font color="red"><strong>有主用户就无法删除</strong>  </font></p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;每日学习Linux基础命令 第七天&lt;/p&gt;
+&lt;h1 id=&quot;创建用户&quot;&gt;&lt;a href=&quot;#创建用户&quot; class=&quot;headerlink&quot; title=&quot;创建用户&quot;&gt;&lt;/a&gt;&lt;font size=&quot;4&quot;&gt;创建用户&lt;/font&gt;&lt;/h1&gt;&lt;figure class=&quot;hig
+      
+    
+    </summary>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/linux/"/>
+    
+    
+      <category term="Linux" scheme="http://yoursite.com/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>Linux-用户和用户组</title>
